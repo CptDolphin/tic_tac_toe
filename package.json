@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx pm2 --attach --watch src/backend/server.js start src/backend/server.js --max-restarts 1 --name tic",
+    "delete": "npx pm2 delete all"
   },
   "repository": {
     "type": "git",
