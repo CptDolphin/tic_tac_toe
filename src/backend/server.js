@@ -4,7 +4,7 @@ const path = require('path');
 
 const paths = [
   [/html$/i, path.join(__dirname, '../frontend/index.html'), 'text/html'],
-  [/style$/i, path.join(__dirname, '../frontend/style.css'), 'text/css'],
+  [/css$/i, path.join(__dirname, '../frontend/styles.css'), 'text/css'],
   [/js$/i, undefined, 'text/javascript']
 ];
 const port = 7000;
@@ -12,7 +12,9 @@ const hostname = 'localhost';
 
 http.createServer((request, response) => {
   if(!request.url.includes('favicon.ico')) {
-    request.url = '/index.html'
+    if(request.url === '/') {
+      request.url = '/index.html'
+    }
     
     const route = paths.find(elem => elem[0].test(request.url));
   

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx pm2 --attach --watch src/backend/server.js start src/backend/server.js --max-restarts 1 --name tic",
+    "start": "npx pm2 --watch src/backend/server.js --attach --max-restarts 1 --name app start src/backend/server.js",
     "delete": "npx pm2 delete all"
   },
   "repository": {
