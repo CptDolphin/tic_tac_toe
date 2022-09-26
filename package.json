@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/CptDolphin/tic_tac_toe#readme",
   "dependencies": {
-    "pm2": "^4.2.1"
+    "pm2": "^5.2.0"
   }
 }
